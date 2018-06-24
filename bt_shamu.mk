@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/moto/shamu/aosp_shamu.mk)
+$(call inherit-product, device/moto/shamu/screwd_shamu.mk)
 
 # Add overlay to enable extra Bluetooth profiles
 DEVICE_PACKAGE_OVERLAYS += \
@@ -22,7 +22,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_NAME := bt_shamu
 PRODUCT_DEVICE := shamu
-PRODUCT_BRAND := Android
+PRODUCT_BRAND := Google
 PRODUCT_MODEL := BT Shamu
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_RESTRICT_VENDOR_FILES := true

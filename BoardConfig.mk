@@ -141,3 +141,10 @@ DEVICE_MANIFEST_FILE := device/moto/shamu/manifest.xml
 DEVICE_MATRIX_FILE := device/moto/shamu/compatibility_matrix.xml
 
 -include vendor/moto/shamu/BoardConfigVendor.mk
+
+# Disable VNDK. This thing isn't getting treble.
+PRODUCT_FULL_TREBLE	:= false
+BOARD_VNDK_RUNTIME_DISABLE := true
+
+# Recovery
+LZMA_RAMDISK_TARGETS := recovery
