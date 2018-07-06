@@ -23,7 +23,10 @@ PRODUCT_COPY_FILES := device/moto/shamu/apns-full-conf.xml:system/etc/apns-conf.
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-PRODUCT_NAME := screwd_shamu
+# Inherit some common AEX stuff.
+$(call inherit-product, vendor/aosp/common.mk)
+
+PRODUCT_NAME := aosp_shamu
 PRODUCT_DEVICE := shamu
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Nexus 6
@@ -33,8 +36,6 @@ PRODUCT_MANUFACTURER := motorola
 $(call inherit-product, device/moto/shamu/device.mk)
 $(call inherit-product-if-exists, vendor/moto/shamu/device-vendor.mk)
 
-PRODUCT_NAME := screwd_shamu
-
 PRODUCT_PACKAGES += \
     Launcher3
 
@@ -42,7 +43,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=shamu \
     BUILD_FINGERPRINT=google/shamu/shamu:7.1.1/N6F27M/4299435:user/release-keys \
-    PRIVATE_BUILD_DESC="shamu-user 7.1.1 N6F27M 4299435 release-keys"
+    PRIVATE_BUILD_DESC="shamu-user 7.1.1 N6F27M 4299435 release-keys" 
     
 # Kernel inline build
 TARGET_KERNEL_SOURCE := kernel/moto/shamu
@@ -51,3 +52,5 @@ TARGET_GCC_VERSION_ARM := 4.9
 
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
+TARGET_BOOT_ANIMATION_RES := 1080
