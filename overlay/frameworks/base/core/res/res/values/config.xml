@@ -400,4 +400,8 @@
         <item>"/system/framework/arm/boot-core-libart.oat"</item>
         <item>"/system/framework/arm/boot-core-libart.vdex"</item>
     </string-array>
+    
+    <!-- Whether the device supports Smart Pixels --> 
+    <bool name="config_enableSmartPixels">true</bool>
+
 </resources>
