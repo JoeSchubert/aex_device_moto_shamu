@@ -15,3 +15,4 @@
 #
 
 add_lunch_combo aosp_shamu-user
+add_lunch_combo aosp_shamu-userdebug
